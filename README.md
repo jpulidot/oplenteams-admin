@@ -16,3 +16,7 @@ Before deployment:
 The new site uses local logos, Teams domain health links, private-only configuration and an explicit Teams registry. The old web installer and static mock login are disabled/removed. Publication must not precede private configuration and database validation.
 
 Status 2026-10-28: migration source and tests prepared. Hosting configuration, real database copy and live acceptance remain blocked by unavailable server access; no production cutover is claimed.
+
+## Current rollout status
+
+See the [project status and numbered backlog](https://github.com/jpulidot/oplen-master/blob/main/docs/PROJECT-STATUS.md). Admin migration code and CI are ready; server configuration, copied registry and production cutover remain unverified. Billing is a read-only Sandbox view, not evidence of live revenue or an active subscription platform.
