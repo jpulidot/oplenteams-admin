@@ -1,0 +1,1 @@
+.lead-card[draggable="true"]{cursor:grab;user-select:none}.lead-card.dragging{opacity:.35;cursor:grabbing}.lead-card.saving{opacity:.5;pointer-events:none}.pipeline-col{transition:border-color .15s ease,background .15s ease}.pipeline-col.drag-over{border-color:#c7ff35;background:#0d0f0a}.pipeline-col.drag-over .pipeline-stack{min-height:450px}.pipeline-empty{pointer-events:none}

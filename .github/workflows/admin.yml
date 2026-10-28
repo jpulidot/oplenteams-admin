@@ -1,0 +1,31 @@
+name: Admin checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  php:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: pdo_sqlite
+      - name: PHP syntax
+        run: find . -name '*.php' -not -path './vendor/*' -print0 | xargs -0 -n1 php -l
+      - name: Subscription boundaries and validation
+        run: php tests/subscription.php
+
+      - name: Overview truthfulness and unavailable sources
+        run: php tests/overview.php
+      - name: Settings persistence and audit
+        run: php tests/settings.php
+      - name: Billing data and Sandbox classification
+        run: php tests/billing.php
+      - name: Customer directory isolation and availability
+        run: php tests/users.php
+      - name: Manual lead creation and atomic activity
+        run: php tests/lead-create.php
+
+      - name: Teams private configuration boundary
+        run: php tests/teams-config.php

@@ -1,0 +1,16 @@
+.subscription-layout{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(260px,.7fr);gap:20px;max-width:1040px;align-items:start}
+.subscription-card{padding:28px}.subscription-form{display:grid;gap:24px}
+.subscription-form label{display:flex;flex-direction:column;gap:9px;font-size:12px;color:var(--text);font-weight:600}
+.subscription-form input,.subscription-form select,.subscription-form textarea{min-width:0;font-size:14px;font-weight:400;letter-spacing:normal;color-scheme:dark}
+.subscription-form small{font-size:11px;font-weight:400;line-height:1.6;color:#93939b}
+.subscription-form textarea{resize:vertical;min-height:100px}
+.subscription-actions{display:flex;justify-content:flex-end;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:22px}
+.subscription-summary h2{overflow-wrap:anywhere}.subscription-summary dl{margin:0}
+.subscription-summary dl>div{display:flex;justify-content:space-between;gap:18px;padding:15px 0;border-bottom:1px solid var(--line)}
+.subscription-summary dt{color:#93939b;font-size:12px}.subscription-summary dd{margin:0;text-align:right;font-size:12px}
+.subscription-summary p{font-size:12px;line-height:1.7;color:#93939b;margin:22px 0 0}
+@media(max-width:1000px){.subscription-layout{grid-template-columns:1fr}.subscription-card{padding:22px}}
+@media(max-width:520px){.subscription-actions{flex-wrap:wrap}.subscription-actions .button{flex:1}.subscription-summary dl>div{flex-wrap:wrap}}
+
+
+.organization-actions{display:flex;gap:8px;flex-wrap:wrap}.danger-link{color:#ff9999!important}.danger-button{background:#a62935!important;color:#fff!important}.deletion-card{max-width:720px;border:1px solid #612832}.deletion-card>p{color:#aaa;line-height:1.7;margin-bottom:24px}
